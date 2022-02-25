@@ -1,0 +1,126 @@
+*  {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Courier Prime", sans-serif;
+}
+
+
+.wrapper {
+    width: 650px;
+    height: 350px;
+    background: #fa5959;
+    border-radius: 50px;
+    margin: 5px auto;
+    z-index: 2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+  
+  
+}
+
+input {
+    width: 350px;
+    align-self: flex-end;
+    margin-right: 50px;
+    height: 30px;
+  
+}
+
+
+input {
+    border: none;
+    border-radius: 2px;
+}
+
+#name {
+    margin-top: 30px;
+}
+.labelToken, .emailInput, .name {
+   position: relative;
+   margin-left: 25px;
+   font-size: 16px;
+   color: #fff;
+   font-weight: bolder;
+}
+
+ .container .name {
+    position: relative;
+    top: 60px;
+} 
+
+.container .emailInput {
+    position: relative;
+    top: 20px;
+}
+
+.container .labelToken {
+    position: relative;
+    top: 30px;
+}
+
+span {
+    margin-left: 15px;
+    color: #ff0000;
+}
+
+.sub-container {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-top: 30px;
+   
+}
+
+#check {
+    width: 16px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+#check:hover {
+    cursor: pointer;
+}
+
+p {
+    color: #fff;
+    font-weight: bolder;
+}
+
+ #text {
+
+    position: relative;
+    right: 130px;
+    margin-top: 20px;
+    border-radius: 0 0 0 0;
+}
+
+#btn {
+    width: 100px;
+    height: 35px;
+    margin-top: 18px;
+    border-radius: 10px;
+    background: #fa5959;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: bolder;
+    margin-left: 250px;
+}
+
+#btn:hover {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    position: relative;
+    top: -260px;
+    width: 1090px;
+    height: 900px;
+    margin: auto;
+    z-index: -2;
+    object-fit: cover;
+}
