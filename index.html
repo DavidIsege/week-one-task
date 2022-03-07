@@ -15,24 +15,25 @@
 <body>
 
     <div class="wrapper">
-        <form action="#" class="container">
-            <label for="name" class="name">Your Name <span>*</span></label>
+        <form class="container" method = "post">
+            <label for="name" id="first-name-label" class="name">Your Name <span>*</span></label>
             <input type="text" name="name" id="name">
 
             <label for="email" class="emailInput">Your Email <span>*</span></label>
-            <input type="text" name="email" id="email">
+            <input type="email" name="email" id="email">
 
-            <label for="a-token" class="labelToken">Activation Token <span>*</span></label>
-            <input type="text" name="a-token" id="a-token">
+            <label for="token" class="labelToken">Activation Token <span>*</span></label>
+            <input type="password" name="token" id="token">
 
             <div class="sub-container">
                 <p>You agree to the <a href="#">privacy policy.</a><span>*</span></p>
-                <input type="checkbox" name="check" id="check" checked>
+                <input type="checkbox" name="check" id="accept" value="yes">
             </div>
 
-            <input type="text" name="text" id="text">
+            <div id="textbox"></div>
 
-            <button id="btn">Submit</button>
+            <button type="submit" id="btn">Submit</button>
+            
 
         </form>
     </div>
@@ -40,4 +41,30 @@
     <img src="img.png" alt="image">
 
 </body>
+<script>
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let token = document.getElementById("token");
+        let textbox = document.getElementById("accept");
+        let form = document.querySelector(".container")
+        
+        form.addEventListener('submit', validate);
+        
+        function validate(e){
+            e.preventDefault();
+            if(name.value == ""){
+               document.getElementById("textbox").innerText='USERNAME MUST BE FILLED OUT';
+               return;
+            } if(email.value == ""){
+                document.getElementById("textbox").innerText='EMAIL MUST BE FILLED OUT!!!';
+                return;
+            } if(token.value == ""){
+               document.getElementById("textbox").innerText='ACTIVATION CODE MUST BE FILLED OUT!!!';
+               return;
+            }   if(textbox.checked == false){
+                document.getElementById("textbox").innerText='PRIVACY MUST BE CHECKED!!!';
+                return;
+            }
+        }
+        </script>
 </html>

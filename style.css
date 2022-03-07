@@ -31,9 +31,11 @@ input {
 }
 
 
-input {
+input [type=text],input[type=email],input[type=password]{
     border: none;
     border-radius: 2px;
+    text-align: left;
+    display: inline-block;
 }
 
 #name {
@@ -54,12 +56,17 @@ input {
 
 .container .emailInput {
     position: relative;
-    top: 20px;
+    top: 20px;   
+}
+.container #email {
+    border: 5px solid red;
+    height: 35px;
 }
 
 .container .labelToken {
     position: relative;
     top: 30px;
+    
 }
 
 span {
@@ -71,11 +78,13 @@ span {
     display: flex;
     align-self: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-left: 100px;
+    
    
 }
 
-#check {
+#accept {
     width: 16px;
     height: 20px;
     margin-left: 10px;
@@ -90,10 +99,10 @@ p {
     font-weight: bolder;
 }
 
- #text {
+ #textbox {
 
     position: relative;
-    right: 130px;
+    margin-right: 80px;
     margin-top: 20px;
     border-radius: 0 0 0 0;
 }
@@ -101,7 +110,7 @@ p {
 #btn {
     width: 100px;
     height: 35px;
-    margin-top: 18px;
+    margin-top: 20px;
     border-radius: 10px;
     background: #fa5959;
     border: 2px solid #fff;
@@ -124,3 +133,14 @@ img {
     z-index: -2;
     object-fit: cover;
 }
+
+#textbox{
+    margin-left: 180px;
+   background-color: white;
+   height: 35px;
+   width:320px;
+   color: red;
+   text-align: center;
+   font-family: 'Courier Prime', monospace;
+   font-size: 17px;
+   }
